@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PatchesToneLib.Application.Patches.Queries.GetPatcheDetail;
+using PatchesToneLib.Application.Patches.Commands.CreatePatch;
+using PatchesToneLib.Application.Patches.Models;
+using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesList;
 
 namespace PatchesToneLib.Web.Controllers
@@ -14,34 +16,38 @@ namespace PatchesToneLib.Web.Controllers
     public class PatchesController : Controller
     {
 
-        private readonly IGetPatchesListQuery _getPatchesList;
-        private readonly IGetPatcheDetailQuery _getPatcheDetail;
+        private readonly IGetPatchesListQuery _getPatches;
+        private readonly IGetPatchDetailQuery _getPatch;
+        private readonly ICreatePatchCommand _createPatch;
 
-        public PatchesController(IGetPatchesListQuery getPatchesList,
-            IGetPatcheDetailQuery getPatcheDetail)
+        public PatchesController(IGetPatchesListQuery getPatches,
+            IGetPatchDetailQuery getPatch,
+            ICreatePatchCommand createPatch)
         {
-            _getPatchesList = getPatchesList;
-            _getPatcheDetail = getPatcheDetail;
+            _getPatches = getPatches;
+            _getPatch = getPatch;
+            _createPatch = createPatch;
         }
 
-        // GET: api/Patches
+        // GET: api/Patch
         [HttpGet]
-        public IEnumerable<PatchesListItemModel> Get()
+        public IEnumerable<PatchModel> Get()
         {
-            return _getPatchesList.Execute();
+            return _getPatches.Execute();
         }
 
         // GET: api/Patches/5
         [HttpGet("{id}", Name = "Get")]
-        public PatcheDetailModel Get(int id)
+        public PatchModel Get(int id)
         {
-            return _getPatcheDetail.Execute(id);
+            return _getPatch.Execute(id);
         }
 
         // POST: api/Patches
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]PatchModel patch)
         {
+            _createPatch.Execute(patch);
         }
 
         // PUT: api/Patches/5

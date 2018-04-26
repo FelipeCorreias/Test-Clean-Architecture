@@ -10,11 +10,11 @@ namespace PatchesToneLib.Persistance
 {
   public class DatabaseService : DbContext, IDatabaseService
     {
-        public DbSet<Patche> Patches { get; set; }
+        public DbSet<Patch> Patches { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Persistance\patches.db");
+            optionsBuilder.UseSqlite(@"Data Source="+AppDomain.CurrentDomain.BaseDirectory+"patches.db");
         }
 
 
@@ -27,7 +27,7 @@ namespace PatchesToneLib.Persistance
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.ApplyConfiguration(new PatcheConfiguration());
+            modelBuilder.ApplyConfiguration(new PatchConfiguration());
 
         }
     }

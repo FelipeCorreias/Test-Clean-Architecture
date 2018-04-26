@@ -7,9 +7,9 @@ using System.Text;
 
 namespace PatchesToneLib.Persistance.Patches
 {
-    class PatcheConfiguration : IEntityTypeConfiguration<Patche>
+    class PatchConfiguration : IEntityTypeConfiguration<Patch>
     {
-        public void Configure(EntityTypeBuilder<Patche> builder)
+        public void Configure(EntityTypeBuilder<Patch> builder)
         {
             builder.HasKey(c => c.Id);
             builder.Property(c => c.Name).HasMaxLength(255);

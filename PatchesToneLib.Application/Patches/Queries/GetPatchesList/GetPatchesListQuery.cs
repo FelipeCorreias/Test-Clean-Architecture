@@ -1,4 +1,5 @@
 ﻿using PatchesToneLib.Application.Interfaces;
+using PatchesToneLib.Application.Patches.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace PatchesToneLib.Application.Patches.Queries.GetPatchesList
             _db = db;
         }
 
-        public List<PatchesListItemModel> Execute()
+        public List<PatchModel> Execute()
         {
-            var patches = _db.Patches.Select(p => new PatchesListItemModel()
+            var patches = _db.Patches.Select(p => new PatchModel()
             {
                 Id = p.Id,
                 Name = p.Name,

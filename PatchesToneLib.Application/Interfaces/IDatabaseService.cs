@@ -8,7 +8,7 @@ namespace PatchesToneLib.Application.Interfaces
 {
    public interface IDatabaseService
     {
-        DbSet<Patche> Patches { get; set; }
+        DbSet<Patch> Patches { get; set; }
         void Save();
     }
 }

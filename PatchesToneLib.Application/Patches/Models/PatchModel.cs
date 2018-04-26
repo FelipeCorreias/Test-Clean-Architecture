@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PatchesToneLib.Application.Patches.Queries.GetPatcheDetail
+namespace PatchesToneLib.Application.Patches.Models
 {
-   public class PatcheDetailModel
+   public class PatchModel
     {
         public int Id { get; set; }
         public string Name { get; set; }

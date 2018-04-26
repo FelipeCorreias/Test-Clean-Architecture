@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PatchesToneLib.Application.Interfaces;
-using PatchesToneLib.Application.Patches.Queries.GetPatcheDetail;
+using PatchesToneLib.Application.Patches.Commands.CreatePatch;
+using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesList;
 using PatchesToneLib.Persistance;
+using System;
 
 namespace PatchesToneLib.Web
 {
@@ -22,8 +24,12 @@ namespace PatchesToneLib.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddScoped<IGetPatchesListQuery, GetPatchesListQuery>();
-            services.AddScoped<IGetPatcheDetailQuery, GetPatcheDetailQuery>();
+            services.AddScoped<IGetPatchDetailQuery, GetPatchDetailQuery>();
+            services.AddScoped<ICreatePatchCommand, CreatePatchCommand>();
+
+
             services.AddScoped<IDatabaseService, DatabaseService>();
             services.AddMvc();
 
@@ -65,6 +71,7 @@ namespace PatchesToneLib.Web
 
                 if (env.IsDevelopment())
                 {
+                    spa.Options.StartupTimeout = new TimeSpan(0, 0, 80);
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });

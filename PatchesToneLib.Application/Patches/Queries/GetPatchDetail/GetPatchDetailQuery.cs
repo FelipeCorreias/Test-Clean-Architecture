@@ -1,23 +1,24 @@
 ﻿using PatchesToneLib.Application.Interfaces;
+using PatchesToneLib.Application.Patches.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PatchesToneLib.Application.Patches.Queries.GetPatcheDetail
+namespace PatchesToneLib.Application.Patches.Queries.GetPatchDetail
 {
-    public class GetPatcheDetailQuery : IGetPatcheDetailQuery
+    public class GetPatchDetailQuery : IGetPatchDetailQuery
     {
         private readonly IDatabaseService _db;
 
-        public GetPatcheDetailQuery(IDatabaseService db)
+        public GetPatchDetailQuery(IDatabaseService db)
         {
             _db = db;
         }
 
-        public PatcheDetailModel Execute(int patcheID)
+        public PatchModel Execute(int patcheID)
         {
-            var patche = _db.Patches.Where(p => p.Id == patcheID).Select(p => new PatcheDetailModel()
+            var patche = _db.Patches.Where(p => p.Id == patcheID).Select(p => new PatchModel()
             {
                 Id = p.Id,
                 Name = p.Name,
