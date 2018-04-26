@@ -16,9 +16,9 @@ namespace PatchesToneLib.Application.Patches.Queries.GetPatchDetail
             _db = db;
         }
 
-        public PatchModel Execute(int patcheID)
+        public PatchModel Execute(int patchID)
         {
-            var patche = _db.Patches.Where(p => p.Id == patcheID).Select(p => new PatchModel()
+            var patch = _db.Patches.Where(p => p.Id == patchID).Select(p => new PatchModel()
             {
                 Id = p.Id,
                 Name = p.Name,
@@ -26,7 +26,7 @@ namespace PatchesToneLib.Application.Patches.Queries.GetPatchDetail
                 Genre = p.Genre
             }).Single();
 
-            return patche;
+            return patch;
         }
     }
 }

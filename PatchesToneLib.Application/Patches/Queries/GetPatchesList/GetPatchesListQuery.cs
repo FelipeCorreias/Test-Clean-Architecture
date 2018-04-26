@@ -23,7 +23,9 @@ namespace PatchesToneLib.Application.Patches.Queries.GetPatchesList
                 Id = p.Id,
                 Name = p.Name,
                 Genre = p.Genre,
-                Artist = p.Artist
+                Artist = p.Artist,
+                Created = p.Created,
+                Updated = p.Updated
             });
 
             return patches.ToList();

@@ -10,5 +10,7 @@ namespace PatchesToneLib.Application.Patches.Models
         public string Name { get; set; }
         public string Artist { get; set; }
         public string Genre { get; set; }
+        public DateTime Updated { get; set; }
+        public DateTime Created { get; set; }
     }
 }

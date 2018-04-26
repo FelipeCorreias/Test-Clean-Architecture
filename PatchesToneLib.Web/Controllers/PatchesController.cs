@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PatchesToneLib.Application.Patches.Commands.CreatePatch;
+using PatchesToneLib.Application.Patches.Commands.UpdatePatch;
 using PatchesToneLib.Application.Patches.Models;
 using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesList;
@@ -19,14 +20,17 @@ namespace PatchesToneLib.Web.Controllers
         private readonly IGetPatchesListQuery _getPatches;
         private readonly IGetPatchDetailQuery _getPatch;
         private readonly ICreatePatchCommand _createPatch;
+        private readonly IUpdatePatchCommand _updatePatch;
 
         public PatchesController(IGetPatchesListQuery getPatches,
             IGetPatchDetailQuery getPatch,
-            ICreatePatchCommand createPatch)
+            ICreatePatchCommand createPatch,
+            IUpdatePatchCommand updatePatch)
         {
             _getPatches = getPatches;
             _getPatch = getPatch;
             _createPatch = createPatch;
+            _updatePatch = updatePatch;
         }
 
         // GET: api/Patch
@@ -45,15 +49,17 @@ namespace PatchesToneLib.Web.Controllers
 
         // POST: api/Patches
         [HttpPost]
-        public void Post([FromBody]PatchModel patch)
+        public void Post([FromBody]PatchModel patchModel)
         {
-            _createPatch.Execute(patch);
+            _createPatch.Execute(patchModel);
         }
 
         // PUT: api/Patches/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]PatchModel patchModel)
         {
+            patchModel.Id = id;
+            _updatePatch.Execute(patchModel);
         }
 
         // DELETE: api/ApiWithActions/5

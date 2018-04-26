@@ -7,6 +7,6 @@ namespace PatchesToneLib.Application.Patches.Queries.GetPatchDetail
 {
     public interface IGetPatchDetailQuery
     {
-        PatchModel Execute(int PatcheID);
+        PatchModel Execute(int patchID);
     }
 }

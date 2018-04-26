@@ -16,12 +16,12 @@ namespace PatchesToneLib.Application.Patches.Commands.CreatePatch
             _db = db;
         }
 
-        public void Execute(PatchModel model) {
+        public void Execute(PatchModel patchModel) {
             var patch = new Patch
             {
-                Name = model.Name,
-                Artist = model.Artist,
-                Genre = model.Genre
+                Name = patchModel.Name,
+                Artist = patchModel.Artist,
+                Genre = patchModel.Genre
             };
             _db.Patches.Add(patch);
             _db.Save();

@@ -6,3 +6,4 @@ C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Domain\obj\Debug
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Domain\obj\Debug\netstandard2.0\PatchesToneLib.Domain.AssemblyInfo.cs
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Domain\obj\Debug\netstandard2.0\PatchesToneLib.Domain.dll
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Domain\obj\Debug\netstandard2.0\PatchesToneLib.Domain.pdb
+C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Domain\obj\Debug\netstandard2.0\PatchesToneLib.Domain.csprojResolveAssemblyReference.cache

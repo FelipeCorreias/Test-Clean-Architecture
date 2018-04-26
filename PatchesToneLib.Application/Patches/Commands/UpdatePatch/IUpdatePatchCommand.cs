@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PatchesToneLib.Application.Patches.Commands.CreatePatch
+namespace PatchesToneLib.Application.Patches.Commands.UpdatePatch
 {
-   public interface ICreatePatchCommand
+    public interface IUpdatePatchCommand
     {
         void Execute(PatchModel patchModel);
     }
