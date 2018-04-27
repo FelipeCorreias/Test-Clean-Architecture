@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PatchesToneLib.Application.Patches.Commands.CreatePatch;
+using PatchesToneLib.Application.Patches.Commands.DeletePatch;
 using PatchesToneLib.Application.Patches.Commands.UpdatePatch;
 using PatchesToneLib.Application.Patches.Models;
 using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
@@ -21,16 +22,19 @@ namespace PatchesToneLib.Web.Controllers
         private readonly IGetPatchDetailQuery _getPatch;
         private readonly ICreatePatchCommand _createPatch;
         private readonly IUpdatePatchCommand _updatePatch;
+        private readonly IDeletePatchCommand _deletePatch;
 
         public PatchesController(IGetPatchesListQuery getPatches,
             IGetPatchDetailQuery getPatch,
             ICreatePatchCommand createPatch,
-            IUpdatePatchCommand updatePatch)
+            IUpdatePatchCommand updatePatch,
+            IDeletePatchCommand deletePatch)
         {
             _getPatches = getPatches;
             _getPatch = getPatch;
             _createPatch = createPatch;
             _updatePatch = updatePatch;
+            _deletePatch = deletePatch;
         }
 
         // GET: api/Patch
@@ -66,6 +70,7 @@ namespace PatchesToneLib.Web.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            _deletePatch.Execute(id);
         }
     }
 }
