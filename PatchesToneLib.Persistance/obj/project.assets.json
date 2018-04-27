@@ -1952,6 +1952,7 @@
           "Microsoft.EntityFrameworkCore": "2.0.2",
           "Microsoft.NET.Test.Sdk": "15.5.0",
           "Microsoft.NETCore.App": "2.0.0",
+          "PatchesToneLib.Common": "1.0.0",
           "PatchesToneLib.Domain": "1.0.0"
         },
         "compile": {
@@ -1959,6 +1960,16 @@
         },
         "runtime": {
           "bin/placeholder/PatchesToneLib.Application.dll": {}
+        }
+      },
+      "PatchesToneLib.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/PatchesToneLib.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PatchesToneLib.Common.dll": {}
         }
       },
       "PatchesToneLib.Domain/1.0.0": {
@@ -6573,6 +6584,11 @@
       "path": "../PatchesToneLib.Application/PatchesToneLib.Application.csproj",
       "msbuildProject": "../PatchesToneLib.Application/PatchesToneLib.Application.csproj"
     },
+    "PatchesToneLib.Common/1.0.0": {
+      "type": "project",
+      "path": "../PatchesToneLib.Common/PatchesToneLib.Common.csproj",
+      "msbuildProject": "../PatchesToneLib.Common/PatchesToneLib.Common.csproj"
+    },
     "PatchesToneLib.Domain/1.0.0": {
       "type": "project",
       "path": "../PatchesToneLib.Domain/PatchesToneLib.Domain.csproj",
@@ -6590,23 +6606,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\felip\\.nuget\\packages\\": {},
+    "C:\\Users\\felipesilva\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Persistance\\PatchesToneLib.Persistance.csproj",
+      "projectUniqueName": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Persistance\\PatchesToneLib.Persistance.csproj",
       "projectName": "PatchesToneLib.Persistance",
-      "projectPath": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Persistance\\PatchesToneLib.Persistance.csproj",
-      "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Persistance\\obj\\",
+      "projectPath": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Persistance\\PatchesToneLib.Persistance.csproj",
+      "packagesPath": "C:\\Users\\felipesilva\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Persistance\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\felipesilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6619,11 +6635,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Application\\PatchesToneLib.Application.csproj": {
-              "projectPath": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Application\\PatchesToneLib.Application.csproj"
+            "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Application\\PatchesToneLib.Application.csproj": {
+              "projectPath": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Application\\PatchesToneLib.Application.csproj"
             },
-            "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj": {
-              "projectPath": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj"
+            "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj": {
+              "projectPath": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj"
             }
           }
         }

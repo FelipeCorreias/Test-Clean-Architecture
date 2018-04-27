@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
 using PatchesToneLib.Persistance;
 using System;
 
@@ -27,15 +26,15 @@ namespace PatchesToneLib.Persistance.Migrations
                     b.Property<string>("Artist")
                         .HasMaxLength(255);
 
-                    b.Property<DateTime>("Created");
+                    b.Property<byte[]>("File");
+
+                    b.Property<string>("FileName");
 
                     b.Property<string>("Genre")
                         .HasMaxLength(255);
 
                     b.Property<string>("Name")
                         .HasMaxLength(255);
-
-                    b.Property<DateTime>("Updated");
 
                     b.HasKey("Id");
 

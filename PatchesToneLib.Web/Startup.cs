@@ -9,6 +9,8 @@ using PatchesToneLib.Application.Patches.Commands.DeletePatch;
 using PatchesToneLib.Application.Patches.Commands.UpdatePatch;
 using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesList;
+using PatchesToneLib.Application.Patches.Queries.GetPatchFile;
+using PatchesToneLib.Common.Files;
 using PatchesToneLib.Persistance;
 using System;
 
@@ -26,13 +28,17 @@ namespace PatchesToneLib.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //*PATCH*//
+            //*QUERIES*//
             services.AddScoped<IGetPatchesListQuery, GetPatchesListQuery>();
             services.AddScoped<IGetPatchDetailQuery, GetPatchDetailQuery>();
+            services.AddScoped<IGetPatchFileQuery, GetPatchFileQuery>();
+            //*COMMANDS*//
             services.AddScoped<ICreatePatchCommand, CreatePatchCommand>();
             services.AddScoped<IUpdatePatchCommand, UpdatePatchCommand>();
             services.AddScoped<IDeletePatchCommand, DeletePatchCommand>();
 
+            services.AddScoped<IFileService, FileService>();
             services.AddScoped<IDatabaseService, DatabaseService>();
 
             services.AddMvc();

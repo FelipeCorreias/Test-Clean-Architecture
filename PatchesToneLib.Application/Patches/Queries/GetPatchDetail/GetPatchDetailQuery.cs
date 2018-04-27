@@ -23,7 +23,8 @@ namespace PatchesToneLib.Application.Patches.Queries.GetPatchDetail
                 Id = p.Id,
                 Name = p.Name,
                 Artist = p.Artist,
-                Genre = p.Genre
+                Genre = p.Genre,
+                FileName = p.FileName
             }).Single();
 
             return patch;

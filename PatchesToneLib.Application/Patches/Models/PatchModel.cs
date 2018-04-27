@@ -4,13 +4,12 @@ using System.Text;
 
 namespace PatchesToneLib.Application.Patches.Models
 {
-   public class PatchModel
+    public class PatchModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Artist { get; set; }
+        public string FileName { get; set; }
         public string Genre { get; set; }
-        public DateTime Updated { get; set; }
-        public DateTime Created { get; set; }
     }
 }

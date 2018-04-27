@@ -12,7 +12,9 @@
           "MSTest.TestFramework": "1.2.0",
           "Microsoft.EntityFrameworkCore": "2.0.2",
           "Microsoft.NET.Test.Sdk": "15.5.0",
-          "PatchesToneLib.Domain": "1.0.0"
+          "PatchesToneLib.Common": "1.0.0",
+          "PatchesToneLib.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "2.0.1.0"
         },
         "runtime": {
           "PatchesToneLib.Application.dll": {}
@@ -1109,9 +1111,19 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "PatchesToneLib.Common/1.0.0": {
+        "runtime": {
+          "PatchesToneLib.Common.dll": {}
+        }
+      },
       "PatchesToneLib.Domain/1.0.0": {
         "runtime": {
           "PatchesToneLib.Domain.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.0.1.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Http.Features.dll": {}
         }
       }
     }
@@ -1724,8 +1736,18 @@
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
+    "PatchesToneLib.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "PatchesToneLib.Domain/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Http.Features/2.0.1.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

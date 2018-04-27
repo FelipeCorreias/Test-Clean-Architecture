@@ -1203,10 +1203,16 @@
           "MSTest.TestFramework": "1.2.0",
           "Microsoft.EntityFrameworkCore": "2.0.2",
           "Microsoft.NET.Test.Sdk": "15.5.0",
+          "PatchesToneLib.Common": "1.0.0",
           "PatchesToneLib.Domain": "1.0.0"
         },
         "runtime": {
           "PatchesToneLib.Application.dll": {}
+        }
+      },
+      "PatchesToneLib.Common/1.0.0": {
+        "runtime": {
+          "PatchesToneLib.Common.dll": {}
         }
       },
       "PatchesToneLib.Domain/1.0.0": {
@@ -1909,6 +1915,11 @@
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
     "PatchesToneLib.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PatchesToneLib.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

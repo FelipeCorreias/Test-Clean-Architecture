@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Domain", "Pa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Persistance", "PatchesToneLib.Persistance\PatchesToneLib.Persistance.csproj", "{D89A5864-BF05-46E1-A6E0-9131E778804B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchesToneLib.Application", "PatchesToneLib.Application\PatchesToneLib.Application.csproj", "{C31902C4-1AFD-4356-9CB2-1E1613A094B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Application", "PatchesToneLib.Application\PatchesToneLib.Application.csproj", "{C31902C4-1AFD-4356-9CB2-1E1613A094B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchesToneLib.Common", "PatchesToneLib.Common\PatchesToneLib.Common.csproj", "{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C31902C4-1AFD-4356-9CB2-1E1613A094B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C31902C4-1AFD-4356-9CB2-1E1613A094B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C31902C4-1AFD-4356-9CB2-1E1613A094B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
