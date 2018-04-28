@@ -36,3 +36,5 @@ C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Persistance\obj\
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Persistance\obj\Debug\netcoreapp2.0\PatchesToneLib.Persistance.csproj.CopyComplete
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Persistance\obj\Debug\netcoreapp2.0\PatchesToneLib.Persistance.dll
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Persistance\obj\Debug\netcoreapp2.0\PatchesToneLib.Persistance.pdb
+C:\Users\felip\source\repos\teste\PatchesToneLib.Persistance\bin\Debug\netcoreapp2.0\PatchesToneLib.Common.dll
+C:\Users\felip\source\repos\teste\PatchesToneLib.Persistance\bin\Debug\netcoreapp2.0\PatchesToneLib.Common.pdb

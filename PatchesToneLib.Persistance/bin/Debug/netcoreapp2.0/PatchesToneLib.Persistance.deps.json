@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "c086b5cdacb723972546fde8834de423697f9f65"
+    "signature": "07a97faa7127836b174b2f2169789fd3888e471c"
   },
   "compilationOptions": {},
   "targets": {
@@ -16,6 +16,14 @@
         },
         "runtime": {
           "PatchesToneLib.Persistance.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
       "Microsoft.CodeCoverage/1.0.3": {
@@ -1201,6 +1209,7 @@
         "dependencies": {
           "MSTest.TestAdapter": "1.2.0",
           "MSTest.TestFramework": "1.2.0",
+          "Microsoft.AspNetCore.Http.Features": "2.0.2",
           "Microsoft.EntityFrameworkCore": "2.0.2",
           "Microsoft.NET.Test.Sdk": "15.5.0",
           "PatchesToneLib.Common": "1.0.0",
@@ -1211,6 +1220,9 @@
         }
       },
       "PatchesToneLib.Common/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.0.2"
+        },
         "runtime": {
           "PatchesToneLib.Common.dll": {}
         }
@@ -1227,6 +1239,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Http.Features/2.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1U5fPSOtIq+cPuqJTjN+EFN3dWn4ptSjybd8minSbyhy0oXr8ujYla86kb9kM3rddUBgrGCyTp/hf0/tMZab+g==",
+      "path": "microsoft.aspnetcore.http.features/2.0.2",
+      "hashPath": "microsoft.aspnetcore.http.features.2.0.2.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/1.0.3": {
       "type": "package",

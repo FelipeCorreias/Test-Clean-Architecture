@@ -1,5 +1,26 @@
-<tbody>
-  <tr *ngFor="let patch of patches">
-    <td>{{ forecast.name }}</td>
-  </tr>
-</tbody>
+<h1>Patches</h1>
+
+<!--<p>This component demonstrates fetching data from the server.</p>-->
+
+<p *ngIf="!patches"><em>Loading...</em></p>
+
+<table class='table' *ngIf="patches">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Artist</th>
+      <th>Genre</th>
+      <th>File</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patch of patches">
+      <td>{{ patch.id }}</td>
+      <td>{{ patch.name }}</td>
+      <td>{{ patch.artist }}</td>
+      <td>{{ patch.genre }}</td>
+      <td><a href="{{getPatchFile(patch.id)}}">{{ patch.fileName }}</a></td>
+    </tr>
+  </tbody>
+</table>
