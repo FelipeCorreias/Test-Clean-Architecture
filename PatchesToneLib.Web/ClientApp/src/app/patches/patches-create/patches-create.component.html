@@ -1,3 +1,44 @@
 <h1>Send Patch</h1>
 
 <!--<p>This component demonstrates fetching data from the server.</p>-->
+
+<form (ngSubmit)="onSubmit(formPatchCreate.value)" [formGroup]="formPatchCreate">
+  <div class="form-group">
+    <label for="name">Patch Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="artist">Artist</label>
+    <input type="text" class="form-control" id="artist" formControlName="artist" />
+  </div>
+
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <select class="form-control" id="genre" formControlName="genre">
+      <option value="  ">Select</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="model">Model</label>
+    <select class="form-control" id="model" formControlName="model">
+      <option value="Zoom G3Xn / Zoom G3n">Zoom G3Xn / Zoom G3n</option>
+      <option value="Zoom B3n">Zoom B3n</option>
+      <option value="Zoom G1on / Zoom G1Xon">Zoom G1on / Zoom G1Xon</option>
+      <option value="Zoom B1on / Zoom B1Xon">Zoom B1on / Zoom B1Xon</option>
+      <option value="Zoom MS-50G">Zoom MS-50G</option>
+      <option value="Zoom G5n">Zoom G5n</option>
+      <option value="Zoom MS-60B">Zoom MS-60B</option>
+      <option value="Zoom MS-70CDR">Zoom MS-70CDR</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="file">File</label>
+    <input type="file" id="file" formControlName="file" (change)="handleFileInput($event.target.files)" required />
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+
+</form>

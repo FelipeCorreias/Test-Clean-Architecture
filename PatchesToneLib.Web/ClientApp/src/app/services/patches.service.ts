@@ -19,4 +19,14 @@ export class PatchesService {
     return ('/api/Patches/'+ id + '/File');
   }
 
+  postPatch(patch : Patch, file : File){
+    const formData: FormData = new FormData();
+    formData.append("file",file,file.name);
+    formData.append("name", patch.Name);
+    formData.append("artist", patch.Artist);
+    formData.append("genre", patch.Genre);
+    formData.append("model", patch.Model);
+    return this._http.post('/api/Patches',formData)
+  }
+
 }
