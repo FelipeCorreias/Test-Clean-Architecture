@@ -29,7 +29,8 @@ namespace PatchesToneLib.Application.Patches.Commands.CreatePatch
                 Artist = patchModel.Artist,
                 Genre = patchModel.Genre,
                 File = _fileService.ConvertFileToByteArray(file),
-                FileName = file.FileName
+                FileName = file.FileName,
+                Model = patchModel.Model
             };
             _db.Patches.Add(patch);
             _db.Save();

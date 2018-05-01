@@ -21,6 +21,7 @@ namespace PatchesToneLib.Application.Patches.Commands.UpdatePatch
             patch.Name = patchModel.Name;
             patch.Genre = patchModel.Genre;
             patch.Artist = patchModel.Artist;
+            patch.Model = patchModel.Model;
             _db.Save();
         }
 

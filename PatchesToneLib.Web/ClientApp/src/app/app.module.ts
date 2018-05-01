@@ -7,20 +7,20 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PatchesComponent } from './patches/patches.component';
 
 import { PatchesService } from './services/patches.service';
+import { PatchesListComponent } from './patches/patches-list/patches-list.component';
+import { PatchesCreateComponent } from './patches/patches-create/patches-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
-    PatchesComponent
+    PatchesComponent,
+    PatchesListComponent,
+    PatchesCreateComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,8 +28,9 @@ import { PatchesService } from './services/patches.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: PatchesComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'patches/list', component: PatchesListComponent },
+      { path: 'patches/send', component: PatchesCreateComponent }
+      //{ path: 'fetch-data', component: FetchDataComponent }
     ])
   ],
   providers: [PatchesService],

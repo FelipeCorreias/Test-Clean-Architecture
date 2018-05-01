@@ -11,5 +11,6 @@ namespace PatchesToneLib.Application.Patches.Models
         public string Artist { get; set; }
         public string FileName { get; set; }
         public string Genre { get; set; }
+        public string Model { get; set; }
     }
 }

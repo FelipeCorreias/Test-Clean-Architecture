@@ -4,4 +4,5 @@ export class Patch {
   Artist: string;
   Genre: string;
   FileName: string;
+  Model: string;
 }

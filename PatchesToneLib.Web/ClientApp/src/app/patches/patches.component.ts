@@ -8,26 +8,14 @@ import { Patch } from '../models/patch.model';
   styleUrls: ['./patches.component.css']
 })
 export class PatchesComponent implements OnInit {
-  public patches : Patch[];
-  public _patchesService: PatchesService;
 
-  constructor(private patchesService: PatchesService) {
-    this._patchesService = patchesService;
+
+  constructor() {
   }
 
   ngOnInit() {
-    this.getPatches();
+
   }
 
-  getPatches() {
-    this._patchesService.getPatchesList().subscribe(data => { this.patches = data; })
-      , err => {
-        console.log(err);
-      };
-  }
-
-  getPatchFile(id: number) {
-    return this._patchesService.getPatchFile(id);
-  }
 
 }
