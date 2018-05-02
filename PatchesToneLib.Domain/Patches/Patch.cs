@@ -11,5 +11,8 @@ namespace PatchesToneLib.Domain.Patches
         public string FileName { get; set; }
         public byte[] File { get; set; }
         public string Model { get; set; }
+        public bool IsValid { get; set; }
+
+
     }
 }

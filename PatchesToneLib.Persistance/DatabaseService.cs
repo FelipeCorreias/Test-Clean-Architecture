@@ -14,8 +14,8 @@ namespace PatchesToneLib.Persistance
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlite(@"Data Source=patches.db");
-           optionsBuilder.UseSqlite(@"Data Source="+AppDomain.CurrentDomain.BaseDirectory+"patches.db");
+            optionsBuilder.UseSqlite(@"Data Source=patches.db");
+           //optionsBuilder.UseSqlite(@"Data Source="+AppDomain.CurrentDomain.BaseDirectory+"patches.db");
         }
 
 

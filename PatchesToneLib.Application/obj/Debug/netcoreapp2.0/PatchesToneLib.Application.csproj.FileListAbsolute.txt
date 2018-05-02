@@ -6,12 +6,10 @@ C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\PatchesToneLib.Application.runtimeconfig.dev.json
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\PatchesToneLib.Application.dll
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\PatchesToneLib.Application.pdb
-C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\PatchesToneLib.Common.dll
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\PatchesToneLib.Domain.dll
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\PatchesToneLib.Common.pdb
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\PatchesToneLib.Domain.pdb
-C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Http.Features.xml
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\obj\Debug\netcoreapp2.0\PatchesToneLib.Application.csprojResolveAssemblyReference.cache
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\obj\Debug\netcoreapp2.0\PatchesToneLib.Application.csproj.CoreCompileInputs.cache
 C:\Users\felipesilva\Source\Repos\PatchesToneLib\PatchesToneLib.Application\obj\Debug\netcoreapp2.0\PatchesToneLib.Application.AssemblyInfoInputs.cache

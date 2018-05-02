@@ -24,7 +24,7 @@ export class PatchesCreateComponent implements OnInit {
       artist: new FormControl(this.patch.Artist),
       genre: new FormControl(this.patch.Genre),
       model: new FormControl(this.patch.Model),
-      file: new FormControl(null, Validators.required)
+      file: new FormControl(null, [Validators.required])
     });
   }
 
