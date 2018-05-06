@@ -31,6 +31,7 @@ import { PatchesService } from './services/patches.service';
     RouterModule.forRoot([
       { path: '', component: PatchesComponent, pathMatch: 'full' },
       { path: 'patches/list', component: PatchesListComponent },
+      { path: 'patches/list/:model', component: PatchesListComponent },
       { path: 'patches/send', component: PatchesCreateComponent }
       //{ path: 'fetch-data', component: FetchDataComponent }
     ])

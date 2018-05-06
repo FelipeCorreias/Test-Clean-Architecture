@@ -7,22 +7,65 @@
                 <span class='icon-bar'></span>
                 <span class='icon-bar'></span>
             </button>
-            <a class='navbar-brand' [routerLink]='["/"]'>Patches ToneLib</a>
+            <a class='navbar-brand' [routerLink]='["/"]'>ToneLib Patches</a>
         </div>
         <div class='clearfix'></div>
         <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
-            <ul class='nav navbar-nav'>
-                <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
-                    <a [routerLink]='["/patches/list"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-list'></span> Patches
-                    </a>
-                </li>
-                <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/patches/send"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-send'></span> Send Patch
-                    </a>
-                </li>
-            </ul>
+          <ul class='nav navbar-nav'>
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/B1Xon"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> B1on/B1Xon Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/B3n"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> B3n Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/G1Xon"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> G1on/G1Xon Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/G3Xn"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> G3n/G3Xn Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/G5n"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> G5n Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/MS-50G"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> MS-50G Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/MS-60B"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> MS-60B Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+              <a [routerLink]='["/patches/list/MS-70CDR"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-list'></span> MS-70CDR Patches
+              </a>
+            </li>
+
+            <li [routerLinkActive]='["link-active"]'>
+              <a [routerLink]='["/patches/send"]' (click)='collapse()'>
+                <span class='glyphicon glyphicon-send'></span> Send Patch
+              </a>
+            </li>
+          </ul>
         </div>
     </div>
 </div>

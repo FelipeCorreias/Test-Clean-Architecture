@@ -30,7 +30,8 @@ namespace PatchesToneLib.Application.Patches.Commands.CreatePatch
                 Genre = patchModel.Genre,
                 File = _fileService.ConvertFileToByteArray(file),
                 FileName = file.FileName,
-                Model = patchModel.Model
+                Model = patchModel.Model,
+                Author = patchModel.Author
             };
             _db.Patches.Add(patch);
             _db.Save();

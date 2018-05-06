@@ -6,12 +6,14 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PatchesToneLib.Application.Patches.Commands.ApprovePatch;
 using PatchesToneLib.Application.Patches.Commands.CreatePatch;
 using PatchesToneLib.Application.Patches.Commands.DeletePatch;
 using PatchesToneLib.Application.Patches.Commands.UpdatePatch;
 using PatchesToneLib.Application.Patches.Models;
 using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesList;
+using PatchesToneLib.Application.Patches.Queries.GetPatchesListByModel;
 using PatchesToneLib.Application.Patches.Queries.GetPatchFile;
 
 namespace PatchesToneLib.Web.Controllers
@@ -24,15 +26,18 @@ namespace PatchesToneLib.Web.Controllers
         private readonly IGetPatchesListQuery _getPatches;
         private readonly IGetPatchDetailQuery _getPatch;
         private readonly IGetPatchFileQuery _getPatchFile;
+        private readonly IGetPatchesListByModelQuery _getPatchesByModel;
 
         private readonly ICreatePatchCommand _createPatch;
         private readonly IUpdatePatchCommand _updatePatch;
         private readonly IDeletePatchCommand _deletePatch;
+        private readonly IApprovePatchCommand _approvePatch;
         
 
         public PatchesController(IGetPatchesListQuery getPatches,
             IGetPatchDetailQuery getPatch,
             IGetPatchFileQuery getPatchFile,
+            IGetPatchesListByModelQuery getPatchesByModel,
             ICreatePatchCommand createPatch,
             IUpdatePatchCommand updatePatch,
             IDeletePatchCommand deletePatch)
@@ -40,17 +45,25 @@ namespace PatchesToneLib.Web.Controllers
             _getPatches = getPatches;
             _getPatch = getPatch;
             _getPatchFile = getPatchFile;
+            _getPatchesByModel = getPatchesByModel;
 
             _createPatch = createPatch;
             _updatePatch = updatePatch;
             _deletePatch = deletePatch;
         }
 
-        // GET: api/Patch
+        // GET: api/Patches
         [HttpGet]
         public IEnumerable<PatchModel> Get()
         {
             return _getPatches.Execute();
+        }
+
+        // GET: api/Patches/Model/G1on
+        [HttpGet("Model/{model}")]
+        public IEnumerable<PatchModel> Get(string model)
+        {
+            return _getPatchesByModel.Execute(model);
         }
 
         // GET: api/Patches/5
@@ -82,6 +95,13 @@ namespace PatchesToneLib.Web.Controllers
         {
             patchModel.Id = id;
             _updatePatch.Execute(patchModel);
+        }
+
+        // PUT: api/Patches/5/Approve
+        [HttpPut("{id}/Approve")]
+        public void Put(int id)
+        {
+            _approvePatch.Execute(id);
         }
 
         // DELETE: api/ApiWithActions/5

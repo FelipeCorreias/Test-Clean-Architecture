@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Persistance"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Application", "PatchesToneLib.Application\PatchesToneLib.Application.csproj", "{C31902C4-1AFD-4356-9CB2-1E1613A094B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatchesToneLib.Common", "PatchesToneLib.Common\PatchesToneLib.Common.csproj", "{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Common", "PatchesToneLib.Common\PatchesToneLib.Common.csproj", "{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -17,7 +17,7 @@ namespace PatchesToneLib.Application.Patches.Queries.GetPatchFile
 
         public byte[] Execute(int patchID)
         {
-            var patch = _db.Patches.Where(p => p.Id == patchID).Single();
+            var patch = _db.Patches.Where(p => p.Id == patchID && p.IsApproved).Single();
             return patch.File;
         }
     }

@@ -2,7 +2,11 @@
 
 <!--<p>This component demonstrates fetching data from the server.</p>-->
 
-<form (ngSubmit)="onSubmit(formPatchCreate.value)" [formGroup]="formPatchCreate">
+<div *ngIf="messageShow" class="{{ messageClass }} alert-dismissable">
+  {{message}}
+</div>
+
+<form (ngSubmit)="onSubmit(formPatchCreate.value)" [formGroup]="formPatchCreate" (change)="handleMessage()">
   <div class="form-group">
     <label for="name">Patch Name</label>
     <input type="text" class="form-control" id="name" formControlName="name" required />
@@ -36,15 +40,20 @@
   <div class="form-group">
     <label for="model">Model</label>
     <select class="form-control" id="model" formControlName="model">
-      <option value="Zoom G3n/G3Xn">Zoom G3n/G3Xn</option>
-      <option value="Zoom B3n">Zoom B3n</option>
-      <option value="Zoom G1on/G1Xon">Zoom G1on/G1Xon</option>
-      <option value="Zoom B1on/B1Xon">Zoom B1on/B1Xon</option>
-      <option value="Zoom MS-50G">Zoom MS-50G</option>
-      <option value="Zoom G5n">Zoom G5n</option>
-      <option value="Zoom MS-60B">Zoom MS-60B</option>
-      <option value="Zoom MS-70CDR">Zoom MS-70CDR</option>
+      <option value="G3Xn">G3n/G3Xn</option>
+      <option value="B3n">B3n</option>
+      <option value="G1Xon">G1on/G1Xon</option>
+      <option value="B1Xon">B1on/B1Xon</option>
+      <option value="MS-50G">MS-50G</option>
+      <option value="G5n">G5n</option>
+      <option value="MS-60B">MS-60B</option>
+      <option value="MS-70CDR">MS-70CDR</option>
     </select>
+  </div>
+
+    <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" class="form-control" id="author" formControlName="author" />
   </div>
 
   <div class="form-group">

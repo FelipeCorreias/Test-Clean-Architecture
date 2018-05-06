@@ -15,6 +15,10 @@ export class PatchesService {
     return this._http.get<Patch[]>('/api/Patches');
   }
 
+  getPatchesListByModel(model: string) {
+    return this._http.get<Patch[]>('/api/Patches/Model/' + model);
+  }
+
   getPatchFile(id: number) : string {
     return ('/api/Patches/'+ id + '/File');
   }
@@ -26,6 +30,7 @@ export class PatchesService {
     formData.append("artist", patch.Artist);
     formData.append("genre", patch.Genre);
     formData.append("model", patch.Model);
+    formData.append("author", patch.Author);
     return this._http.post('/api/Patches',formData)
   }
 

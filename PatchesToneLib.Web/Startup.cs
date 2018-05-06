@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PatchesToneLib.Application.Interfaces;
+using PatchesToneLib.Application.Patches.Commands.ApprovePatch;
 using PatchesToneLib.Application.Patches.Commands.CreatePatch;
 using PatchesToneLib.Application.Patches.Commands.DeletePatch;
 using PatchesToneLib.Application.Patches.Commands.UpdatePatch;
 using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesList;
+using PatchesToneLib.Application.Patches.Queries.GetPatchesListByModel;
 using PatchesToneLib.Application.Patches.Queries.GetPatchFile;
 using PatchesToneLib.Common.Files;
 using PatchesToneLib.Persistance;
@@ -33,10 +35,13 @@ namespace PatchesToneLib.Web
             services.AddScoped<IGetPatchesListQuery, GetPatchesListQuery>();
             services.AddScoped<IGetPatchDetailQuery, GetPatchDetailQuery>();
             services.AddScoped<IGetPatchFileQuery, GetPatchFileQuery>();
+            services.AddScoped<IGetPatchesListByModelQuery, GetPatchesListByModelQuery>();
             //*COMMANDS*//
             services.AddScoped<ICreatePatchCommand, CreatePatchCommand>();
             services.AddScoped<IUpdatePatchCommand, UpdatePatchCommand>();
             services.AddScoped<IDeletePatchCommand, DeletePatchCommand>();
+            services.AddScoped<IApprovePatchCommand, ApprovePatchCommand>();
+
 
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IDatabaseService, DatabaseService>();

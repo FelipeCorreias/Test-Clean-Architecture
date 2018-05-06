@@ -5,4 +5,5 @@ export class Patch {
   Genre: string;
   FileName: string;
   Model: string;
+  Author: string;
 }

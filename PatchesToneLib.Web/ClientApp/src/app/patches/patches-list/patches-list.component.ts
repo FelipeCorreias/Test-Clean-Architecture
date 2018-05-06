@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Patch } from '../../models/patch.model';
 import { PatchesService } from '../../services/patches.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-patches-list',
@@ -10,13 +11,28 @@ import { PatchesService } from '../../services/patches.service';
 export class PatchesListComponent implements OnInit {
   public patches: Patch[];
   public _patchesService: PatchesService;
+  public _route: ActivatedRoute;
 
-  constructor(private patchesService: PatchesService) {
+  constructor(private patchesService: PatchesService, private route: ActivatedRoute) {
     this._patchesService = patchesService;
+    this._route = route;
   }
 
   ngOnInit() {
-    this.getPatches();
+    this._route.params.subscribe(params => this.getPatchesByModel(params['model']));
+  }
+
+  getPatchesByModel(model: string) {
+    console.log(model);
+    if (model != null) {
+      this._patchesService.getPatchesListByModel(model).subscribe(data => { this.patches = data; })
+        , err => {
+          console.log(err);
+        };
+    } else {
+      this.getPatches();
+    }
+    
   }
 
   getPatches() {

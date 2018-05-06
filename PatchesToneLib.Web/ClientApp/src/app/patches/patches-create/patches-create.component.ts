@@ -14,6 +14,11 @@ export class PatchesCreateComponent implements OnInit {
   public patch = new Patch();
   public file: File;
   public _patchesService: PatchesService;
+  public messageShow: boolean = false;
+  public messageClass: string;
+  public message: string;
+
+
   constructor(private patchesService: PatchesService) {
     this._patchesService = patchesService;
   }
@@ -23,8 +28,9 @@ export class PatchesCreateComponent implements OnInit {
       name: new FormControl(this.patch.Name, [Validators.required]),
       artist: new FormControl(this.patch.Artist),
       genre: new FormControl(this.patch.Genre),
-      model: new FormControl(this.patch.Model),
-      file: new FormControl(null, [Validators.required])
+      model: new FormControl(this.patch.Model, [Validators.required]),
+      file: new FormControl(null, [Validators.required]),
+      author: new FormControl(this.patch.Author)
     });
   }
 
@@ -34,8 +40,26 @@ export class PatchesCreateComponent implements OnInit {
       this.patch.Artist = values.artist;
       this.patch.Genre = values.genre;
       this.patch.Model = values.model;
-      this._patchesService.postPatch(this.patch, this.file).subscribe();
+      this.patch.Author = values.author;
+      this._patchesService.postPatch(this.patch, this.file).subscribe(result => {
+        //console.log(result)
+      },
+        error => {
+          this.message = "Oops ... Failed to send the patch, check the completed information. " + error;
+          this.messageClass = "alert alert-danger";
+          this.messageShow = true;
+        },
+        () => {
+          this.message = "Thanks for submitting a patch. Soon it will be available.";
+          this.messageClass = "alert alert-success";
+          this.messageShow = true;
+          this.formPatchCreate.reset();
+        });
     }
+  }
+
+  handleMessage() {
+    this.messageShow = false;
   }
 
   handleFileInput(files: FileList) {

@@ -5,20 +5,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PatchesToneLib.Application.Patches.Queries.GetPatchesList
+namespace PatchesToneLib.Application.Patches.Queries.GetPatchesListByModel
 {
-   public class GetPatchesListQuery : IGetPatchesListQuery
+   public class GetPatchesListByModelQuery : IGetPatchesListByModelQuery
     {
         private readonly IDatabaseService _db;
 
-        public GetPatchesListQuery(IDatabaseService db)
+        public GetPatchesListByModelQuery(IDatabaseService db)
         {
             _db = db;
         }
 
-        public List<PatchModel> Execute()
+        public List<PatchModel> Execute(string model)
         {
-            var patches = _db.Patches.Where(p => p.IsApproved).Select(p => new PatchModel()
+            var patches = _db.Patches.Where(p => p.IsApproved && p.Model.Contains(model)).Select(p => new PatchModel()
             {
                 Id = p.Id,
                 Name = p.Name,
