@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatchesToneLib.Common", "PatchesToneLib.Common\PatchesToneLib.Common.csproj", "{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{596DD86C-C0D2-43B2-B078-0ED0C3E9DACE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5AC288F-7AA5-40FF-8ABF-44B5B7C7187E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596DD86C-C0D2-43B2-B078-0ED0C3E9DACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596DD86C-C0D2-43B2-B078-0ED0C3E9DACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596DD86C-C0D2-43B2-B078-0ED0C3E9DACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596DD86C-C0D2-43B2-B078-0ED0C3E9DACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

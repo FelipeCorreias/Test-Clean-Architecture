@@ -177,23 +177,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\felip\\.nuget\\packages\\": {},
+    "C:\\Users\\felipesilva\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj",
       "projectName": "PatchesToneLib.Domain",
-      "projectPath": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj",
-      "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\felip\\source\\repos\\teste\\PatchesToneLib.Domain\\obj\\",
+      "projectPath": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Domain\\PatchesToneLib.Domain.csproj",
+      "packagesPath": "C:\\Users\\felipesilva\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\felipesilva\\Source\\Repos\\PatchesToneLib\\PatchesToneLib.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\felipesilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

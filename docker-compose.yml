@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  patchestonelib.web:
+    image: patchestonelibweb
+    build:
+      context: .
+      dockerfile: PatchesToneLib.Web/Dockerfile
