@@ -19,20 +19,22 @@ export class PatchesListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._route.params.subscribe(params => this.getPatchesByModel(params['model']));
+    this._route.params.subscribe(params => {
+      this.patches = null;
+      console.log(params['model']);
+      if (params['model'] != null) {
+        this.getPatchesByModel(params['model'])
+      } else {
+        this.getPatches();
+      }
+    });
   }
 
   getPatchesByModel(model: string) {
-    console.log(model);
-    if (model != null) {
-      this._patchesService.getPatchesListByModel(model).subscribe(data => { this.patches = data; })
-        , err => {
-          console.log(err);
-        };
-    } else {
-      this.getPatches();
-    }
-    
+    this._patchesService.getPatchesListByModel(model).subscribe(data => { this.patches = data; })
+      , err => {
+        console.log(err);
+      };
   }
 
   getPatches() {

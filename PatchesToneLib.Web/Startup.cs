@@ -11,6 +11,7 @@ using PatchesToneLib.Application.Patches.Commands.UpdatePatch;
 using PatchesToneLib.Application.Patches.Queries.GetPatchDetail;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesList;
 using PatchesToneLib.Application.Patches.Queries.GetPatchesListByModel;
+using PatchesToneLib.Application.Patches.Queries.GetPatchesToApproveList;
 using PatchesToneLib.Application.Patches.Queries.GetPatchFile;
 using PatchesToneLib.Common.Files;
 using PatchesToneLib.Persistance;
@@ -36,6 +37,7 @@ namespace PatchesToneLib.Web
             services.AddScoped<IGetPatchDetailQuery, GetPatchDetailQuery>();
             services.AddScoped<IGetPatchFileQuery, GetPatchFileQuery>();
             services.AddScoped<IGetPatchesListByModelQuery, GetPatchesListByModelQuery>();
+            services.AddScoped<IGetPatchesListToApproveQuery, GetPatchesListToApproveQuery>();
             //*COMMANDS*//
             services.AddScoped<ICreatePatchCommand, CreatePatchCommand>();
             services.AddScoped<IUpdatePatchCommand, UpdatePatchCommand>();
